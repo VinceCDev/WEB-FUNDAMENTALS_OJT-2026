@@ -298,7 +298,7 @@ a {
 }
 
 .reasons-grid p {
-    color: var(--text-gray);
+    color: #b3b3b3;
     font-size: 1rem;
 }
 
@@ -329,7 +329,7 @@ a {
 }
 
 .faq-list li {
-    background-color: var(--netflix-gray);
+    background-color:#2d2d2d;
     padding: 24px;
     display: flex;
     justify-content: space-between;
@@ -359,7 +359,7 @@ a {
 /* --- Footer --- */
 .site-footer {
     padding: 4rem 10%;
-    color: var(--text-gray);
+    color: #b3b3b3;
     background-color: black;
 }
 
