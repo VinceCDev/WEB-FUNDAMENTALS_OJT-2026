@@ -45,22 +45,22 @@ body {
     margin-right: 4px;
 }
 
-.site-header a span {
+.site-header a p {
     font-size: 1.2rem;
     color: #535456;
     font-weight: lighter;
     letter-spacing: 0.5px;
 }
 
-.site-header a span b,
-.brand-logo.light span,
-.brand-logo.light b {
+.site-header a p span,
+.brand-logo span,
+.brand-logo.light span {
     color: #000000;
     font-weight: 600;
 }
 
-.brand-logo.light span,
-.brand-logo.light b {
+.brand-logo.light p,
+.brand-logo.light span {
     color: #ffffff;
 }
 
@@ -318,9 +318,14 @@ input[type="search"]::placeholder {
 
 .brand-logo img {
     height: 32px;
+    margin-bottom: 23px;
 }
 
-.brand-logo span {
+.overflow-ai img {
+    margin-bottom: 0;
+}
+
+.brand-logo p {
     font-size: 1.4rem;
     color: #232629;
     letter-spacing: -0.5px;
@@ -404,6 +409,10 @@ input[type="search"]::placeholder {
     max-width: 550px;
     height: auto;
     z-index: 1;
+}
+
+.work-content .brand-logo img {
+    margin-bottom: 0;
 }
 
 .work-content a {
