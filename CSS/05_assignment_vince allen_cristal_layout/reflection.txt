@@ -1,0 +1,7 @@
+Submitted by: Vince Allen D. Cristal
+Time Spent: 1.5 hours
+
+Reflection:
+I started this assignment by focusing on creating the HTML structure followed by establishing the CSS but I found it challenging to align the exact colors and font sizes of the original website based on the image given. Also, I spent a significant amount of time searching for the correct icons and images because high-quality versions were difficult to find. Besides, getting the spacing between the various sections was hard requiring me to constantly adjust the margins and padding. To solve these challenges, I carefully compared my work to the reference image and kept changing the CSS values until they looked similar. This process of trial and error eventually helped me achieve the correct style as intended.
+
+Furthermore, I faced several problems with positioning the elements specifically the search box in the navigation bar. I often struggled to decide which HTML tags were the best choice for each section including when to use a div versus a header. There were times when the layout did not match properly which forced me to review my code multiple times. I overcame these difficulties by experimenting with different display and alignment properties until every element position in the right place. Through this persistence, I successfully fixed the positioning errors and completed the assignment with a clean layout.

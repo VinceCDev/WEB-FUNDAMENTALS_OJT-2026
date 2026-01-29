@@ -1,0 +1,7 @@
+Submitted by: Vince Allen D. Cristal
+Time Spent: 3 hours
+
+Reflection:
+I initially found this challenge difficult because I struggled to identify the correct Flexbox properties needed to replicate the layout. Specifically, I was confused about which CSS combinations would achieve the correct alignment for the nested sections inside the right panel. I also found it challenging to balance the spacing, as I kept mixing up when to use padding versus margin to create the gaps between the boxes. Determining the right font sizes and colors to match the reference image added another layer of complexity to the task. It took me some time to realize that the gap property was much more efficient than manually setting margins for every element.
+
+To solve these issues, I utilized with different values for flex-direction and justify-content until the boxes moved into the correct positions. I focused on grouping the elements properly in the HTML first, which made it easier to target them with the correct CSS rules. I also spent time adjusting the padding and margins incrementally to ensure the white space around the header and footer looked proportional. By testing different combinations of Flexbox rules, I eventually understood how parent and child containers interact to control the layout. The entire assignment took me about one hour to complete as I carefully refined the details to match the example.

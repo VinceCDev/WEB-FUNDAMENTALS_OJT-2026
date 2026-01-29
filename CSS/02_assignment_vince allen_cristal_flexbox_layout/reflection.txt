@@ -1,0 +1,7 @@
+Submitted by: Vince Allen D. Cristal
+Time Spent: 1 hour
+
+Reflection:
+I began this challenge by carefully analyzing the provided image to understand how the boxes needed to be arranged vertically and horizontally. My biggest struggle was identifying the right property and value to use for the spacing, as I was initially confused between using standard margins or Flexbox-specific rules. To solve this, I experimented with different properties on the body element and realized that display: flex combined with flex-direction: column was the most efficient way to stack the main sections. I also spent time testing different justify-content values on the main container to properly separate the aside and section elements without manually setting pixels. Once I finally applied the correct gap property, I was able to achieve the exact spacing required by the reference image without breaking the layout.
+
+The entire assignment took me about one hour to complete as I carefully double-checked that my code matched the visual requirements. Although I found selecting the correct values challenging at first, this exercise gave me a much clearer understanding of how parent and child containers interact in Flexbox. I now feel more comfortable troubleshooting layout issues and choosing the appropriate CSS rules for future web development tasks.

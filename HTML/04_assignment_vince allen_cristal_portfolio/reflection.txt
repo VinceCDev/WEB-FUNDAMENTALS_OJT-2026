@@ -1,0 +1,10 @@
+Submitted by: Vince Allen D. Cristal
+Time: 1.5 hours
+
+Challenges and Resolution
+
+1. Table Structure: I initially struggled with the correct hierarchy of tags needed to build a proper data table for the projects section. I resolved this by carefully organizing the code into distinct table head and table body sections with row elements inside them. This ensured that my project list was displayed clearly with bold column headers and aligned data cells.
+2. In-page Navigation: I was unsure how to make the navigation bar links jump to specific parts of the same page rather than opening a new file. I solved this by assigning unique ID names to each content section and referencing them in the anchor tags with a hash symbol. This allowed the links to smoothly scroll the user directly to the correct area of the portfolio.
+3. Semantic Elements: I found it difficult to decide when to use specific semantic tags like section versus generic container tags. I addressed this by analyzing the content to see if it stood alone as a meaningful topic before applying the specific tag. This resulted in a document structure that is much more readable and accessible than using only generic divisions.
+4. Form Accessibility: My challenge was ensuring that the contact form met the accessibility requirement of pairing labels with inputs correctly. I fixed this by meticulously checking that the for attribute on every label matched the ID attribute of its corresponding input field. This process guaranteed that clicking the text description would correctly activate the input box for the user.
+5. Visual Separation of Content: I noticed that without distinct visual breaks, the different sections of the page appeared too clustered, making it difficult for visitors to distinguish where one topic ended and the next began. I resolved this by utilizing the <br> tag to insert vertical spacing between major sections and divisions. This simple addition created essential whitespace that visually separated the content, significantly improving the overall readability and flow of the page.

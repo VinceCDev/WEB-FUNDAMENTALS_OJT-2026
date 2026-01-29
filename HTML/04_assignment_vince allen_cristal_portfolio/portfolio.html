@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>My Portfolio</title>
+    </head>
+    <body>
+        <header>
+            <h1>Welcome to My Portfolio</h1>
+
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="about">
+                <h2>About Me</h2>
+                <p>
+                  Hello! I am a passionate Information Technology student currently in
+                  my fourth year at Laguna State Polytechnic University majoring in Web
+                  and Mobile Application Development. I have always been fascinated by
+                  how technology works, which led me to focus on creating user-friendly
+                  websites and exploring computer systems. My journey in this field has
+                  taught me how to enjoy the process of solving complex problems through
+                  efficient and clean coding practices. I am dedicated to learning new
+                  tools and frameworks that allow me to build responsive applications
+                  that can help users in their daily lives. As I prepare to enter the
+                  industry, I am eager to showcase my skills and collaborate with others
+                  to build meaningful digital projects.
+                </p>
+
+                <img src="images/vince-profile.jpg" alt="Profile picture of a student web developer"
+                  width="220" height="220">
+            </section>
+
+            <br>
+
+            <section id="projects">
+                <h2>My Projects</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Project Name</th>
+                            <th>Description</th>
+                            <th>Year</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>LSPU - Employment Information System</td>
+                            <td>
+                              A capstone project for tracking and placement of university
+                              graduates.
+                            </td>
+                            <td>2025</td>
+                        </tr>
+                        <tr>
+                            <td>Barangay Management System</td>
+                            <td>
+                              A project for managing and giving services barangay residents.
+                            </td>
+                            <td>2024</td>
+                        </tr>
+                        <tr>
+                            <td>Skills Sphere</td>
+                            <td>A learning platform for students to improve their skills.</td>
+                            <td>2024</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <br>
+
+            <section id="contact">
+                <h2>Contact Me</h2>
+                <p>Have a question? Fill out the form below!</p>
+
+                <form action="#" method="POST">
+                    <div>
+                        <label class="form-label" for="fullname">Full Name:</label>
+                        <input type="text" id="fullname" name="fullname" placeholder="Your Name" required>
+                    </div>
+                
+                    <br>
+                
+                    <div>
+                        <label class="form-label" for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                    </div>
+                    
+                    <br>
+
+                     <fieldset>
+                        <legend>How did you hear about this portfolio?</legend>
+
+                        <div>
+                            <input type="radio" id="source_friend" name="source" value="friend">
+                            <label class="field-label" for="source_friend">Friend</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="source_social" name="source" value="social_media">
+                            <label class="field-label" for="source_social">Social Media</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="source_search" name="source" value="search_engine">
+                            <label class="field-label" for="source_search">Search Engine</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="source_other" name="source" value="other">
+                            <label class="field-label" for="source_other">Other</label>
+                        </div>
+                    </fieldset>
+                
+                    <br>
+
+                    <fieldset>
+                        <legend>What topics are you interested in?</legend>
+
+                        <div>
+                            <input type="checkbox" id="interest_web" name="interests" value="web_dev">
+                            <label class="field-label" for="interest_web">Web Development</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="interest_design" name="interests" value="design">
+                            <label class="field-label" for="interest_design">Design</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="interest_photo" name="interests" value="photography">
+                            <label class="field-label" for="interest_photo">Photography</label>
+                        </div>
+                    </fieldset>
+                    
+                    <br>
+
+                    <div>
+                        <label class="form-label" for="comments">Comments or Messages:</label><br>
+                        <textarea id="comments" name="comments" rows="5" cols="40" placeholder="Type your message here..."></textarea>
+                    </div>
+                    
+                    <br>
+
+                    <input type="submit" value="Send Message">
+                </form>
+            </section>
+        </main>
+
+        <footer>
+          <p>© Vince Allen D. Cristal 2026</p>
+        </footer>
+    </body>
+</html>
