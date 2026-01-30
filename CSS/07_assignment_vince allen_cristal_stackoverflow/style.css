@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
 body {
     background-color: #ffffff;
     line-height: 1.6;
@@ -19,6 +25,11 @@ body {
     padding: 8px 15px;
     border-top: 3px solid #e7700d;
     justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
 
 .site-header .logo,
@@ -29,7 +40,7 @@ body {
 .hero-actions,
 .service-card,
 .brand-logo,
-.brand-logo .overflow-ai,
+.overflow-api,
 .work-container {
     display: flex;
     align-items: center;
@@ -52,15 +63,15 @@ body {
     letter-spacing: 0.5px;
 }
 
-.site-header a p span,
-.brand-logo span,
-.brand-logo.light span {
+.site-header .logo span,
+.brand-logo strong,
+.brand-logo.light strong {
     color: #000000;
     font-weight: 600;
 }
 
-.brand-logo.light p,
-.brand-logo.light span {
+.brand-logo.light span,
+.brand-logo.light strong {
     color: #ffffff;
 }
 
@@ -158,6 +169,9 @@ input[type="search"]::placeholder {
     display: flex;
     max-width: 1264px;
     margin: 0 auto;
+    height: calc(100vh - 50px);
+    margin-top: 50px;
+    overflow: hidden;
 }
 
 .nav-sidebar {
@@ -165,16 +179,19 @@ input[type="search"]::placeholder {
     flex-shrink: 0;
     border-right: 1px solid #d6d9dc;
     padding-top: 24px;
-    min-height: 100vh;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
-.nav-sidebar div {
+.nav-sidebar section {
     margin-bottom: 20px;
 }
 
-.nav-sidebar div h2 {
+.nav-sidebar section h2 {
     font-size: 1rem;
     margin-bottom: 5px;
+    padding-left: 4px;
 }
 
 .nav-sidebar .nav-item {
@@ -187,10 +204,22 @@ input[type="search"]::placeholder {
     font-size: 0.9rem;
 }
 
+.nav-sidebar .nav-item img {
+    width: 18px;
+    height: 18px;
+}
+
+.nav-sidebar .nav-item span {
+    font-size: 0.9rem;
+}
+
 .main-content {
     flex-grow: 1;
     padding: 24px 24px 24px 48px;
     background-color: #ffffff;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .hero {
@@ -209,7 +238,7 @@ input[type="search"]::placeholder {
     line-height: 1.2;
     margin-bottom: 24px;
     color: #232629;
-    width: 523px;
+    max-width: 523px;
 }
 
 .hero-description,
@@ -275,8 +304,11 @@ input[type="search"]::placeholder {
     margin-bottom: 16px;
 }
 
-.team-preview, .ai-preview   {
-    width: 500px;
+.team-preview, 
+.ai-preview {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
 }
 
 .service-card p {
@@ -321,14 +353,11 @@ input[type="search"]::placeholder {
     margin-bottom: 23px;
 }
 
-.overflow-ai img {
-    margin-bottom: 0;
-}
-
-.brand-logo p {
+.brand-logo span {
     font-size: 1.4rem;
     color: #232629;
     letter-spacing: -0.5px;
+    font-weight: lighter;
 }
 
 .brand-logo small {
@@ -354,10 +383,17 @@ input[type="search"]::placeholder {
     border-radius: 4px;
     text-decoration: none;
     font-size: 14px;
+    display: inline-block;
 }
 
-.brand-logo .overflow-ai {
+.overflow-api {
+    display: flex;
+    align-items: center;
     gap: 4px;
+}
+
+.overflow-api img {
+    margin-bottom: 0;
 }
 
 .gear-icon {
@@ -367,23 +403,27 @@ input[type="search"]::placeholder {
 }
 
 .api-orange,
-.brand-logo span .api-orange {
+.brand-logo .api-orange {
     color: #f48225 !important;
     font-weight: bold;
 }
 
+.services-subtitle,
+.work-subtitle {
+    font-size: 1.2rem;
+    color: #232629;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
 .card-buttons {
-    font-size: 30px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .work-here-section {
     margin: 20px auto 40px auto;
-}
-
-.work-subtitle {
-    font-size: 1.2rem;
-    color: #232629;
-    margin-bottom: 15px;
 }
 
 .work-container {
@@ -400,6 +440,7 @@ input[type="search"]::placeholder {
     flex: 1;
     max-width: 500px;
     z-index: 2;
+    padding: 30px 0;
 }
 
 .work-illustration {
@@ -422,4 +463,5 @@ input[type="search"]::placeholder {
 .work-text {
     font-size: 1.1rem;
     margin-bottom: 20px;
+    color: #525960;
 }
