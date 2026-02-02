@@ -26,7 +26,7 @@ option {
     color: black; 
 }
 
-.btn-red {
+.user-login, .getting-started {
     background-color: #e50914;
     color: white;
     border: none;
@@ -35,17 +35,17 @@ option {
     cursor: pointer;
 }
 
-.btn-red:hover { 
+.user-login:hover, .getting-started:hover { 
     background-color: #c11119; 
 }
 
-.btn-small {
+.user-login {
     padding: 7px 17px;
     font-size: 0.9rem;
     height: 36px;
 }
 
-.btn-large {
+.getting-started {
     padding: 12px 24px;
     font-size: 1.5rem;
     font-weight: 600;
@@ -533,7 +533,7 @@ option {
         width: 100px; 
     } 
     
-    .btn-small { 
+    .user-loginl { 
         padding: 5px 10px; 
         font-size: 0.8rem; 
     }
@@ -651,7 +651,7 @@ option {
         padding: 2px 8px 2px 28px;
     }
     
-    .btn-small {
+    .user-loginl {
         padding-top: 6px;
         font-size: 0.75rem;
         height: 32px;

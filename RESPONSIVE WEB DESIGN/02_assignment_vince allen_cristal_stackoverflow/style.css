@@ -130,7 +130,7 @@ input[type="search"]::placeholder {
 
 .auth-buttons .btn-signup,
 .btn-primary,
-.btn-blue,
+.btn-core,
 .btn-careers {
     background-color: #0a95ff;
     color: white;
@@ -150,7 +150,7 @@ input[type="search"]::placeholder {
 
 .auth-buttons .btn-signup:hover,
 .btn-primary:hover,
-.btn-blue:hover,
+.btn-core:hover,
 .btn-careers:hover {
     background-color: #0074cc;
 }
@@ -161,7 +161,7 @@ input[type="search"]::placeholder {
     border-radius: 6px;
 }
 
-.btn-blue {
+.btn-core {
     margin-right: 12px;
 }
 
@@ -253,12 +253,12 @@ input[type="search"]::placeholder {
 }
 
 .btn-link,
-.btn-text {
+.btn-aux {
     color: #0074cc;
     text-decoration: none;
 }
 
-.btn-text {
+.btn-aux {
     font-size: 14px;
 }
 
@@ -404,7 +404,7 @@ input[type="search"]::placeholder {
 
 .api-orange,
 .brand-logo .api-orange {
-    color: #f48225 !important;
+    color: #f48225;
     font-weight: bold;
 }
 
@@ -1090,14 +1090,14 @@ input[type="search"]::placeholder {
         gap: 10px;
     }
     
-    .btn-blue {
+    .btn-core {
         width: 100%;
         text-align: center;
         margin-right: 0;
         padding: 10px 16px;
     }
     
-    .btn-text {
+    .btn-aux {
         width: 100%;
         text-align: center;
         padding: 8px 16px;
