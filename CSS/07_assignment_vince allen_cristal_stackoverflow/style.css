@@ -404,7 +404,7 @@ input[type="search"]::placeholder {
 
 .api-orange,
 .brand-logo .api-orange {
-    color: #f48225 !important;
+    color: #f48225;
     font-weight: bold;
 }
 
