@@ -70,4 +70,29 @@ function task3() {
 
 runTasks([task1, task2, task3]); 
 
-// Task 5: Interactive Quiz Game is in the quiz js to demonstrate the quiz game
+// Task 5: Interactive Quiz Game 
+function askQuestion(question, choices, correctAnswer, callback) {
+    console.log("Question: " + question);
+    console.log("Choices: [ " + choices.join(" | ") + " ]");
+
+    console.log("Type your answer in the console using this format:");
+    console.log('submitAnswer("YOUR ANSWER HERE")');
+
+    submitAnswer = function(userInput) {
+        if (userInput === correctAnswer) {
+            callback(true);
+        } else {
+            callback(false);
+        }
+    };
+}
+
+function checkAnswer(isCorrect) {
+    if (isCorrect) {
+        console.log("Correct!");
+    } else {
+        console.log("Wrong!");
+    }
+}
+
+askQuestion("What is 2 + 2?", ["1", "2", "3", "4"], "4", checkAnswer);

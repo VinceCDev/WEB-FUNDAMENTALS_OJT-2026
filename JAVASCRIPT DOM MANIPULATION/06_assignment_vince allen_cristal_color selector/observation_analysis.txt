@@ -1,0 +1,10 @@
+Submitted by: Vince Allen D. Cristal
+
+1. What happens when you click a color button initially? 
+- When you click a button, you will first see an alert saying, "You clicked the color button!" followed immediately by a second alert saying, "You clicked the container!". Also, both the button's code and the container's code are executed because the event bubbles up from the button to the parent container. This effectively resets the background color immediately after you try to change it.
+
+2. What changed after uncommenting event.stopPropagation()? 
+- When you click the button now, only the "You clicked the color button!" alert show and the alert of container is completely ignored. The event is successfully trapped at the button level and does not travel up the DOM tree to the parent. Moreover, the background color logic of the containerdoes not overwrite your selection.
+
+3. Why is event.stopPropagation() useful here? 
+- It is useful because it avoids the parent element from reacting to interactions intended only for its child elements. In this analysis of color selector code, it ensures that choosing a specific color does not accidentally trigger the general click behavior of the container which would otherwise reset the interface. This builds a clean separation of concerns where specific controls can exist inside clickable areas without burden.

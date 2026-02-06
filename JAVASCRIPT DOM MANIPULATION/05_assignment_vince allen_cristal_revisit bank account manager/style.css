@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.5px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.5s ease-out;
+}
+
+h2 {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
+    font-size: 1.3rem;
+    color: #ffffff;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+}
+
+#balance {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+#amountInput {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    border: 2px solid #dee2e6;
+    border-radius: 8px;
+    font-family: inherit;
+    color: #495057;
+    background-color: #f8f9fa;
+    margin-bottom: 20px;
+}
+
+#amountInput:focus {
+    outline: none;
+    border-color: #2a5298;
+    box-shadow: 0 0 0 3px rgba(42, 82, 152, 0.1);
+    background-color: #ffffff;
+}
+
+#amountInput::placeholder {
+    color: #6c757d;
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+button {
+    flex: 1;
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    font-family: inherit;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#depositBtn {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: #ffffff;
+}
+
+#depositBtn:hover {
+    background: linear-gradient(135deg, #162d5a 0%, #1f4278 100%);
+}
+
+#withdrawBtn {
+    background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+    color: #ffffff;
+}
+
+#withdrawBtn:hover {
+    background: linear-gradient(135deg, #5a6268 0%, #343a40 100%);
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.message-section {
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#message {
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 6px;
+}
+
+#message.success {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+#message.error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+.history-section {
+    margin-top: 30px;
+    border-top: 2px solid #f1f1f1;
+    padding-top: 20px;
+}
+
+.history-section h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+#transactionList {
+    list-style: none; 
+    padding: 0;
+    max-height: 200px; 
+    overflow-y: auto;
+    text-align: left;
+}
+
+.history-item {
+    background-color: #e9ecef; 
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.history-item.deposit {
+    border-left: 5px solid #28a745;
+}
+
+.history-item.withdraw {
+    border-left: 5px solid #dc3545; 
+}

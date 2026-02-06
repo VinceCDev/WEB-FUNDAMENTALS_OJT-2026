@@ -1,0 +1,8 @@
+Submitted by: Vince Allen D. Cristal
+
+Reflection:
+Question
+- What other features could you implement to enhance the user experience when updating the profile card? Consider how you might provide additional feedback or automate further actions after an update is made.
+
+Answer
+- In enhancing the user experience of this webpage, I can apply a visual feedback feature such as toast notifications to inform the users regarding the status of their updates in profile editor. Implementing client-side persistence through the localStorage API will enable user customizations to stay intact in various browser sessions and page refreshes. Moreover, transitioning to a real-time synchronization approach will enable the interface to update instantly as the user types and dcrease the need for explicit submission triggers. Besides, I could integrate a validation logic for the input especially the image URL input to indentify and managed broken links or proper data format needed. Lastly, incorporating a functionality to restore default parameters throught reset button will provide users a convenient method to revert the webpage to its original state.

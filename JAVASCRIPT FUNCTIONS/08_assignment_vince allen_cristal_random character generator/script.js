@@ -1,26 +1,23 @@
-function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-function getRandomItem(array) {
-    return array[Math.floor(Math.random() * array.length)];
-}
-
+// Variables Initialization
 const character = {
     name: "Hero",
     health: 100
 };
 
 const classes = ["Warrior", "Mage", "Archer", "Healer", "Assassin"];
-character.class = getRandomItem(classes);
-
-character.randomizeHealth = function() {
-    this.health = getRandomInt(50, 150);
-};
-
 const abilities = ["Fireball", "Healing Touch", "Stealth", "Lightning Strike", "Power Slash"];
-character.specialAbility = getRandomItem(abilities);
 
+// Helper function to get a random number
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// Helper function to pick a random item from a list
+function getRandomItem(array) {
+    return array[Math.floor(Math.random() * array.length)];
+}
+
+// Function to generate a single new character
 function generateCharacter(givenName) {
     const defaultNames = ["Thorin", "Elara", "Zane", "Ivy", "Dante"];
     
@@ -32,6 +29,7 @@ function generateCharacter(givenName) {
         health: getRandomInt(50, 150),
         specialAbility: getRandomItem(abilities),
 
+        // Method to handle attacking another character
         battle: function(otherCharacter) {
             const damage = getRandomInt(5, 20);
             const oldHealth = otherCharacter.health;
@@ -50,6 +48,7 @@ function generateCharacter(givenName) {
     return newChar;
 }
 
+// Function to generate a party of characters
 function generateMultipleCharacters(x) {
     const characterArray = []; 
     
@@ -61,6 +60,15 @@ function generateMultipleCharacters(x) {
     return characterArray;
 }
 
+character.class = getRandomItem(classes);
+
+// Method to randomize the existing character's health
+character.randomizeHealth = function() {
+    this.health = getRandomInt(50, 150);
+};
+character.specialAbility = getRandomItem(abilities);
+
+// Execution codes to test the requirements met
 console.log("\n Generate Single Characters");
 const character1 = generateCharacter("Zane"); 
 const character2 = generateCharacter();       
