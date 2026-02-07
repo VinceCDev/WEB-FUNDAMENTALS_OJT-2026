@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Character Builder</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main class="container">
+            <h1>Character Builder</h1>
+
+            <div class="controls">
+                <p id="message-area"></p> 
+            </div>
+
+            <section id="character-preview">
+                <img src="" alt="" id="layer-helmet" class="layer armor-layer">
+                <img src="" alt="" id="layer-armor" class="layer armor-layer">
+                <img src="" alt="" id="layer-leggings" class="layer armor-layer">
+                <img src="" alt="" id="layer-boots" class="layer armor-layer">
+            </section>
+
+            <section class="controls">
+                
+                <h3>Select Your Helmet</h3>
+                <div class="options-row">
+                    <img src="assets/Yeti_Horned_Helm.png" class="option-item" data-part="helmet" data-src="assets/Yeti_Horned_Helm.png" title="Yeti Helm">
+                    <img src="assets/Fiery_Helmet.png" class="option-item" data-part="helmet" data-src="assets/Fiery_Helmet.png" title="Fiery Helm">
+                    <img src="assets/Knightmetal_Helmet.png" class="option-item" data-part="helmet" data-src="assets/Knightmetal_Helmet.png" title="Knightmetal Helm">
+                    <img src="assets/Arctic_Hood.png" class="option-item" data-part="helmet" data-src="assets/Arctic_Hood.png" title="Arctic Hood">
+                </div>
+
+                <h3>Select Your Armor</h3>
+                <div class="options-row">
+                    <img src="assets/Yeti_Jacket.png" class="option-item" data-part="armor" data-src="assets/Yeti_Jacket.png">
+                    <img src="assets/Fiery_Chestplate.png" class="option-item" data-part="armor" data-src="assets/Fiery_Chestplate.png">
+                    <img src="assets/Knightmetal_Chestplate.png" class="option-item" data-part="armor" data-src="assets/Knightmetal_Chestplate.png">
+                    <img src="assets/Arctic_Jacket.png" class="option-item" data-part="armor" data-src="assets/Arctic_Jacket.png">
+                </div>
+
+                <h3>Select Your Leggings</h3>
+                <div class="options-row">
+                    <img src="assets/Yeti_Leggings.png" class="option-item" data-part="leggings" data-src="assets/Yeti_Leggings.png">
+                    <img src="assets/Fiery_Leggings.png" class="option-item" data-part="leggings" data-src="assets/Fiery_Leggings.png">
+                    <img src="assets/Knightmetal_Greaves.png" class="option-item" data-part="leggings" data-src="assets/Knightmetal_Greaves.png">
+                    <img src="assets/Arctic_Leggings.png" class="option-item" data-part="leggings" data-src="assets/Arctic_Leggings.png">
+                </div>
+
+                <h3>Select Your Boots</h3>
+                <div class="options-row">
+                    <img src="assets/Yeti_Boots.png" class="option-item" data-part="boots" data-src="assets/Yeti_Boots.png">
+                    <img src="assets/Fiery_Boots.png" class="option-item" data-part="boots" data-src="assets/Fiery_Boots.png">
+                    <img src="assets/Knightmetal_Boots.png" class="option-item" data-part="boots" data-src="assets/Knightmetal_Boots.png">
+                    <img src="assets/Arctic_Boots.png" class="option-item" data-part="boots" data-src="assets/Arctic_Boots.png">
+                </div>
+                
+                <button id="lock-in-btn">Lock In Character</button>
+
+            </section>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>

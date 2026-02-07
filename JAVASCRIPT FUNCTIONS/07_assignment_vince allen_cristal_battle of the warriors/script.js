@@ -13,7 +13,14 @@ const warrior2 = {
     attack: attack
 };
 
-// Calculates random damage based on the strength of the warrior
+/* * DOCU: Calculates random damage based on strength
+ * @param {void} - Uses a this approach
+ * @returns {number} - Damage amount
+ * @throws {void}
+ * * Last Updated: 2026-02-07
+ * Author: Vince Allen D. Cristal
+ * Last Updated By: Vince Allen D. Cristal
+ */
 function attack() {
     return Math.floor(Math.random() * (this.strength + 1));
 }

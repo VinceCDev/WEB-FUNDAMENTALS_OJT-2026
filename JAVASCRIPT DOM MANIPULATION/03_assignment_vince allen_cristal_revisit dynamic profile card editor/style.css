@@ -139,7 +139,7 @@ label {
 }
 
 .btn-update {
-    background-color: #4CAF50;
+    background-color: #2196F3;
     padding: 15px 30px;
     font-size: 1.1rem;
     margin-top: 10px;
@@ -147,6 +147,6 @@ label {
 }
 
 .btn-update:hover {
-    background-color: #388E3C;
+    background-color: #1976D2;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }

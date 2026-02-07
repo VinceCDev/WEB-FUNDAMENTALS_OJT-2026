@@ -1,25 +1,38 @@
+// Select container or section
 const container = document.getElementById("container");
 
-// Container Event: Resets color when the gray area is clicked
+/* * DOCU: Resets background color when container is clicked
+ * @param {void} - Uses a this approach
+ * @returns {void}
+ * @throws {void}
+ * * Last Updated: 2026-02-07
+ * Author: Vince Allen Cristal
+ * Last Updated By: Vince Allen Cristal
+ */
 container.addEventListener("click", function () {
     alert("You clicked the container! Resetting color.");
+    
     this.style.backgroundColor = "lightgray";
 });
 
-// Button Events: Changes color and STOPS propagation
+// Select all color buttons
 document.querySelectorAll(".color-box").forEach(button => {
+
+    /* * DOCU: Updates container color and stops event bubbling
+     * @param {Event} event - The click event object
+     * @returns {void}
+     * @throws {void}
+     * * Last Updated: 2026-02-07
+     * Author: Vince Allen Cristal
+     * Last Updated By: Vince Allen Cristal
+     */
     button.addEventListener("click", function (event) {
-        // 1. Stop the event from reaching the container
         event.stopPropagation();
 
-        // 2. Get the actual computed background color of the button
-        // (fix: this.style.backgroundColor is often empty if set via CSS class)
         const newColor = window.getComputedStyle(this).backgroundColor;
 
-        // 3. Apply color to container
         container.style.backgroundColor = newColor;
 
-        // Optional: distinct message
         console.log("Color changed to: " + this.textContent);
     });
 });

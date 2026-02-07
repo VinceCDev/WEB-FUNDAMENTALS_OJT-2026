@@ -1,5 +1,14 @@
+// Select firefly elements
 const fireflies = document.querySelectorAll(".firefly");
 
+/* * DOCU: Moves element to random screen position
+ * @param {HTMLElement} element - Target element
+ * @returns {void}
+ * @throws {void}
+ * * Last Updated: 2026-02-07
+ * Author: Vince Allen D. Cristal
+ * Last Updated By: Vince Allen D. Cristal
+ */
 function moveRandomly(element) {
     const maxWidth = window.innerWidth - 120;
     const maxHeight = window.innerHeight - 120;
@@ -11,9 +20,19 @@ function moveRandomly(element) {
     element.style.top = randomY + "px";
 }
 
+/* * DOCU: Creates visual explosion effect
+ * @param {number} x - X coordinate
+ * @param {number} y - Y coordinate
+ * @returns {void}
+ * @throws {void}
+ * * Last Updated: 2026-02-07
+ * Author: Vince Allen D. Cristal
+ * Last Updated By: Vince Allen D. Cristal
+ */
 function createExplosion(x, y) {
     const burst = document.createElement("div");
     burst.classList.add("explosion-burst");
+    
     burst.style.left = (x - 5) + "px";
     burst.style.top = (y - 5) + "px";
     document.body.appendChild(burst);
@@ -23,6 +42,7 @@ function createExplosion(x, y) {
     }, 400);
 }
 
+// Loop through fireflies
 fireflies.forEach(function (firefly, index) {
     moveRandomly(firefly);
     firefly.style.animationDelay = (index * 0.5) + "s";
@@ -30,6 +50,7 @@ fireflies.forEach(function (firefly, index) {
     firefly.addEventListener("click", function (e) {
         const clickX = e.clientX;
         const clickY = e.clientY;
+        
         createExplosion(clickX, clickY);
 
         this.style.transform = "scale(0.5)";

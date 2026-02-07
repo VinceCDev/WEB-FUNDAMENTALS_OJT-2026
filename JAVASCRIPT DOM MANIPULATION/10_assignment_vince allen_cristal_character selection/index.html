@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Character Selection</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="bg-layer"></div>
+
+        <main>
+            <h1>DEMON SLAYER CHARACTER SELECTION</h1>
+
+            <div class="content-wrapper">
+                <ul class="char-grid">
+                    <li>
+                        <button class="slayer-btn active char-tanjiro"
+                            data-name="Tanjiro Kamado" 
+                            data-ability="Sun Breathing / Water Breathing"
+                            data-img="assets/tanjito_kamado.png">
+                            <img src="assets/tanjito_kamado.png" alt="Tanjiro">
+                        </button>
+                    </li>
+                    <li>
+                        <button class="slayer-btn char-nezuko"
+                            data-name="Nezuko Kamado" 
+                            data-ability="Blood Demon Art: Exploding Blood"
+                            data-img="assets/nezuko_kamado.png">
+                            <img src="assets/nezuko_kamado.png" alt="Nezuko">
+                        </button>
+                    </li>
+                    <li>
+                        <button class="slayer-btn char-zenitsu"
+                            data-name="Zenitsu Agatsuma" 
+                            data-ability="Thunder Breathing: First Form"
+                            data-img="assets/zenitsu_agatsuma.png">
+                            <img src="assets/zenitsu_agatsuma.png" alt="Zenitsu">
+                        </button>
+                    </li>
+                    <li>
+                        <button class="slayer-btn char-inosuke"
+                            data-name="Inosuke Hashibira" 
+                            data-ability="Beast Breathing"
+                            data-img="assets/inosuke_hashibira.png">
+                            <img src="assets/inosuke_hashibira.png" alt="Inosuke">
+                        </button>
+                    </li>
+                    <li>
+                        <button class="slayer-btn char-giyu"
+                            data-name="Giyu Tomioka" 
+                            data-ability="Water Hashira: Dead Calm"
+                            data-img="assets/giyu_tomioka.png">
+                            <img src="assets/giyu_tomioka.png" alt="Giyu">
+                        </button>
+                    </li>
+                    <li>
+                        <button class="slayer-btn char-rengoku"
+                            data-name="Kyojuro Rengoku" 
+                            data-ability="Flame Hashira: Esoteric Art"
+                            data-img="assets/kyojuro_rengoku.png">
+                            <img src="assets/kyojuro_rengoku.png" alt="Rengoku">
+                        </button>
+                    </li>
+                    <li>
+                        <button class="slayer-btn char-shinobu"
+                            data-name="Shinobu Kocho" 
+                            data-ability="Insect Hashira: Butterfly Dance"
+                            data-img="assets/shinobu_kocho.png">
+                            <img src="assets/shinobu_kocho.png" alt="Shinobu">
+                        </button>
+                    </li>
+                    <li>
+                        <button class="slayer-btn char-tengen"
+                            data-name="Tengen Uzui" 
+                            data-ability="Sound Hashira: Musical Score"
+                            data-img="assets/tengen_uzui.png">
+                            <img src="assets/tengen_uzui.png" alt="Tengen">
+                        </button>
+                    </li>
+                    <li>
+                        <button class="slayer-btn char-muzan"
+                            data-name="Muzan Kibutsuji" 
+                            data-ability="Demon King: Biokinesis"
+                            data-img="assets/muzan_kibutsuji.png">
+                            <img src="assets/muzan_kibutsuji.png" alt="Muzan">
+                        </button>
+                    </li>
+                </ul>
+
+                <aside class="char-display">
+                    <img id="hero-img" src="assets/tanjito_kamado.png" alt="Selected Character">
+                    <div class="char-info">
+                        <h2 id="hero-name">Tanjiro Kamado</h2>
+                        <p id="hero-ability">Sun Breathing / Water Breathing</p>
+                    </div>
+                </aside>
+            </div>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>

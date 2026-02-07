@@ -143,27 +143,3 @@ label {
 .btn-primary:hover {
     background-color: #1976D2;
 }
-
-.btn-success {
-    background-color: #4CAF50;
-}
-
-.btn-success:hover {
-    background-color: #388E3C;
-}
-
-.btn-info {
-    background-color: #2196F3;
-}
-
-.btn-info:hover {
-    background-color: #0D47A1;
-}
-
-.btn-secondary {
-    background-color: #607D8B;
-}
-
-.btn-secondary:hover {
-    background-color: #455A64;
-}

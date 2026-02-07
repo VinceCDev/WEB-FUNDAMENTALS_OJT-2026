@@ -1,18 +1,29 @@
+// Select display elements
 const card = document.querySelector('#card');
 const displayName = document.querySelector('#display-name');
 const displayBio = document.querySelector('#display-bio');
 const displayImg = document.querySelector('#display-img');
 
+// Select input fields
 const inputName = document.querySelector('#input-name');
 const inputBio = document.querySelector('#input-bio');
 const inputImg = document.querySelector('#input-img');
 const inputColor = document.querySelector('#color-picker');
 
+// Select buttons
 const btnName = document.querySelector('#btn-name');
 const btnBio = document.querySelector('#btn-bio');
 const btnImg = document.querySelector('#btn-img');
 const btnColor = document.querySelector('#btn-color');
 
+/* * DOCU: Validates input and updates the display name element text.  
+ * @param {void} - No parameters
+ * @returns {void} - Does not return a value
+ * @throws {void} - No explicit exceptions thrown
+ * * Last Updated: 2026-02-07  
+ * Author: Vince Allen D. Cristal  
+ * Last Updated By: Vince Allen D. Cristal  
+ */
 function updateName() {
     if (inputName.value.trim() !== "") {
         displayName.innerText = inputName.value;
@@ -21,6 +32,14 @@ function updateName() {
     }
 }
 
+/* * DOCU: Validates input and updates the display bio element text content.  
+ * @param {void} - No parameters
+ * @returns {void} - Does not return a value
+ * @throws {void} - No explicit exceptions thrown
+ * * Last Updated: 2026-02-07  
+ * Author: Vince Allen D. Cristal  
+ * Last Updated By: Vince Allen D. Cristal  
+ */
 function updateBio() {
     if (inputBio.value.trim() !== "") {
         displayBio.textContent = inputBio.value;
@@ -29,6 +48,14 @@ function updateBio() {
     }
 }
 
+/* * DOCU: Validates the input URL and updates the image source attribute.  
+ * @param {void} - No parameters 
+ * @returns {void} - Does not return a value
+ * @throws {void} - No explicit exceptions thrown
+ * * Last Updated: 2026-02-07  
+ * Author: Vince Allen D. Cristal  
+ * Last Updated By: Vince Allen D. Cristal  
+ */
 function updateImage() {
     if (inputImg.value.trim() !== "") {
         displayImg.setAttribute('src', inputImg.value);
@@ -37,18 +64,28 @@ function updateImage() {
     }
 }
 
+/* * DOCU: Updates the background color of the main card element.  
+ * @param {void} - No parameters
+ * @returns {void} - Does not return a value
+ * @throws {void} - No explicit exceptions thrown
+ * * Last Updated: 2026-02-07  
+ * Author: Vince Allen D. Cristal  
+ * Last Updated By: Vince Allen D. Cristal  
+ */
 function updateColor() {
     card.style.backgroundColor = inputColor.value;
 }
 
+// Attach click event handlers
 btnName.addEventListener('click', updateName);
 btnBio.addEventListener('click', updateBio);
 btnImg.addEventListener('click', updateImage);
 btnColor.addEventListener('click', updateColor);
 
+// Handle enter key on inputs
 inputName.addEventListener('keypress', function(e) {
     if (e.key === 'Enter') {
-        e.preventDefault();
+        e.preventDefault(); 
         updateName();
     }
 });

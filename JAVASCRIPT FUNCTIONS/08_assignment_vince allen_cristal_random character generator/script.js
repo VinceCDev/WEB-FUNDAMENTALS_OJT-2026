@@ -7,17 +7,39 @@ const character = {
 const classes = ["Warrior", "Mage", "Archer", "Healer", "Assassin"];
 const abilities = ["Fireball", "Healing Touch", "Stealth", "Lightning Strike", "Power Slash"];
 
-// Helper function to get a random number
+/* * DOCU: Generates random integer within range
+ * @param {number} min - Minimum value
+ * @param {number} max - Maximum value
+ * @returns {number} - Random integer
+ * @throws {void}
+ * * Last Updated: 2026-02-07
+ * Author: Vince Allen D. Cristal
+ * Last Updated By: Vince Allen D. Cristal
+ */
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// Helper function to pick a random item from a list
+/* * DOCU: Selects random element from array
+ * @param {Array} array - List of items
+ * @returns {any} - Random item
+ * @throws {void}
+ * * Last Updated: 2026-02-07
+ * Author: Vince Allen D. Cristal
+ * Last Updated By: Vince Allen D. Cristal
+ */
 function getRandomItem(array) {
     return array[Math.floor(Math.random() * array.length)];
 }
 
-// Function to generate a single new character
+/* * DOCU: Creates new character object
+ * @param {string} givenName - Name Given in Assignment
+ * @returns {Object} - Character object
+ * @throws {void}
+ * * Last Updated: 2026-02-07
+ * Author: Vince Allen D. Cristal
+ * Last Updated By: Vince Allen D. Cristal
+ */
 function generateCharacter(givenName) {
     const defaultNames = ["Thorin", "Elara", "Zane", "Ivy", "Dante"];
     
@@ -48,7 +70,14 @@ function generateCharacter(givenName) {
     return newChar;
 }
 
-// Function to generate a party of characters
+/* * DOCU: Generates list of characters
+ * @param {number} x - Quantity to create
+ * @returns {Array} - List of characters
+ * @throws {void}
+ * * Last Updated: 2026-02-07
+ * Author: Vince Allen D. Cristal
+ * Last Updated By: Vince Allen D. Cristal
+ */
 function generateMultipleCharacters(x) {
     const characterArray = []; 
     
@@ -62,7 +91,14 @@ function generateMultipleCharacters(x) {
 
 character.class = getRandomItem(classes);
 
-// Method to randomize the existing character's health
+/* * DOCU: Randomizes character health
+ * @param {void} - Uses a this context
+ * @returns {void}
+ * @throws {void}
+ * * Last Updated: 2026-02-07
+ * Author: Vince Allen D. Cristal
+ * Last Updated By: Vince Allen D. Cristal
+ */
 character.randomizeHealth = function() {
     this.health = getRandomInt(50, 150);
 };
