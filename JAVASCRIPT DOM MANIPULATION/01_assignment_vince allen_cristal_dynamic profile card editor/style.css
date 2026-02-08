@@ -136,10 +136,10 @@ label {
     transform: translateY(-1px);
 }
 
-.btn-primary {
+.btn-update {
     background-color: #2196F3;
 }
 
-.btn-primary:hover {
+.btn-update:hover {
     background-color: #1976D2;
 }
