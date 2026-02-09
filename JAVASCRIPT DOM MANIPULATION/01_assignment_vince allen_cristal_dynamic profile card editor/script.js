@@ -10,12 +10,6 @@ const inputBio = document.querySelector('#input-bio');
 const inputImg = document.querySelector('#input-img');
 const inputColor = document.querySelector('#color-picker');
 
-// Select buttons
-const btnName = document.querySelector('#btn-name');
-const btnBio = document.querySelector('#btn-bio');
-const btnImg = document.querySelector('#btn-img');
-const btnColor = document.querySelector('#btn-color');
-
 /* * DOCU: Validates input and updates the display name element text.  
  * @param {void} - No parameters
  * @returns {void} - Does not return a value
@@ -75,31 +69,3 @@ function updateImage() {
 function updateColor() {
     card.style.backgroundColor = inputColor.value;
 }
-
-// Attach click event handlers
-btnName.addEventListener('click', updateName);
-btnBio.addEventListener('click', updateBio);
-btnImg.addEventListener('click', updateImage);
-btnColor.addEventListener('click', updateColor);
-
-// Handle enter key on inputs
-inputName.addEventListener('keypress', function(e) {
-    if (e.key === 'Enter') {
-        e.preventDefault(); 
-        updateName();
-    }
-});
-
-inputBio.addEventListener('keypress', function(e) {
-    if (e.key === 'Enter') {
-        e.preventDefault();
-        updateBio();
-    }
-});
-
-inputImg.addEventListener('keypress', function(e) {
-    if (e.key === 'Enter') {
-        e.preventDefault();
-        updateImage();
-    }
-});
