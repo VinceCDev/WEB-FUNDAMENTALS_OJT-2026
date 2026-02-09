@@ -18,9 +18,9 @@ const btnUpdateProfile = document.getElementById('btn-update-profile');
 
 /* * DOCU: Updates the display name if input is valid
  * @param {void} - Uses global variables
- * @returns {void}
- * @throws {void}
- * * Last Updated: 2026-02-07
+ * @returns {void} - Does not return a value
+ * @throws {void} - No explicit exceptions thrown
+ * * Last Updated: 2026-02-09
  * Author: Vince Allen D. Cristal
  * Last Updated By: Vince Allen D. Cristal
  */
@@ -29,15 +29,14 @@ function updateName() {
     
     if (newName !== "") {
         displayName.textContent = newName;
-        console.log('Name updated to:', newName);
     }
 }
 
 /* * DOCU: Updates the bio text if input is valid
  * @param {void} - Uses global variables
- * @returns {void}
- * @throws {void}
- * * Last Updated: 2026-02-07
+ * @returns {void} - Does not return a value
+ * @throws {void} - No explicit exceptions thrown
+ * * Last Updated: 2026-02-09
  * Author: Vince Allen D. Cristal
  * Last Updated By: Vince Allen D. Cristal
  */
@@ -46,15 +45,14 @@ function updateBio() {
     
     if (newBio !== "") {
         displayBio.textContent = newBio;
-        console.log('Bio updated to:', newBio);
     }
 }
 
 /* * DOCU: Updates the image source and alt text if URL is valid
  * @param {void} - Uses global variables
- * @returns {void}
- * @throws {void}
- * * Last Updated: 2026-02-07
+ * @returns {void} - Does not return a value
+ * @throws {void} - No explicit exceptions thrown
+ * * Last Updated: 2026-02-09
  * Author: Vince Allen D. Cristal
  * Last Updated By: Vince Allen D. Cristal
  */
@@ -62,44 +60,37 @@ function updateImage() {
     const newImgUrl = inputImg.value.trim();
     
     if (newImgUrl !== "") {
-        displayImg.setAttribute('src', newImgUrl);
-        displayImg.setAttribute('alt', 'Updated Profile Picture');
-        console.log('Image updated to:', newImgUrl);
+        displayImg.src = newImgUrl;
+        displayImg.alt = 'Updated Profile Picture';
     }
 }
 
 /* * DOCU: Applies the selected color to the card background
  * @param {void} - Uses global variables
- * @returns {void}
- * @throws {void}
- * * Last Updated: 2026-02-07
+ * @returns {void} - Does not return a value
+ * @throws {void} - No explicit exceptions thrown
+ * * Last Updated: 2026-02-09
  * Author: Vince Allen D. Cristal
  * Last Updated By: Vince Allen D. Cristal
  */
 function updateBackgroundColor() {
     const newColor = colorPicker.value;
-    
     card.style.backgroundColor = newColor;
-    console.log('Background color updated to:', newColor);
 }
 
 /* * DOCU: Orchestrates the update of all profile sections
  * @param {void} - Uses global variables
- * @returns {void}
- * @throws {void}
- * * Last Updated: 2026-02-07
+ * @returns {void} - Does not return a value
+ * @throws {void} - No explicit exceptions thrown
+ * * Last Updated: 2026-02-09
  * Author: Vince Allen D. Cristal
  * Last Updated By: Vince Allen D. Cristal
  */
 function updateProfile() {
-    console.log('=== Updating Profile Card ===');
-    
     updateName();
     updateBio();
     updateImage();
     updateBackgroundColor();
-    
-    console.log('=== Profile Card Update Complete ===');
 }
 
 // Handle update button click
@@ -112,5 +103,3 @@ editorForm.addEventListener('keypress', function(event) {
         updateProfile();        
     }
 });
-
-console.log('Profile Card Editor script loaded successfully!');

@@ -4,9 +4,9 @@ const taskList = document.querySelector('#task-list');
 const notificationArea = document.querySelector('#notification-area');
 
 /* * DOCU: Handles the Add Task button click. Gets input and validates.
- * @param {void}
- * @returns {void}
- * @throws {void}
+ * @param {void} - Uses global variables
+ * @returns {void} - Does not return a value
+ * @throws {void} - No explicit exceptions thrown
  * * Last Updated: 2026-02-09  
  * Author: Vince Allen D. Cristal  
  * Last Updated By: Vince Allen D. Cristal  
@@ -25,8 +25,8 @@ function handleAddTask() {
 
 /* * DOCU: Creates a new task item and appends it to the list
  * @param {string} text - The content of the task
- * @returns {void}
- * @throws {void}
+ * @returns {void} - Does not return a value
+ * @throws {void} - No explicit exceptions thrown
  * * Last Updated: 2026-02-09  
  * Author: Vince Allen D. Cristal  
  * Last Updated By: Vince Allen D. Cristal  
@@ -39,15 +39,17 @@ function addTask(text) {
     span.textContent = text;
     span.className = 'task-text';
     
-    // Set inline onclick for the span
-    span.setAttribute('onclick', 'toggleTask(this)');
+    span.onclick = function() {
+        toggleTask(this);
+    };
 
     const deleteBtn = document.createElement('button');
     deleteBtn.textContent = "Remove";
     deleteBtn.className = 'delete-btn';
 
-    // Set inline onclick for the delete button
-    deleteBtn.setAttribute('onclick', 'removeTask(this)');
+    deleteBtn.onclick = function() {
+        removeTask(this);
+    };
 
     li.appendChild(span);
     li.appendChild(deleteBtn);
@@ -58,8 +60,8 @@ function addTask(text) {
 
 /* * DOCU: Toggles the completed class on the task text
  * @param {HTMLElement} element - The span element clicked
- * @returns {void}
- * Last Updated: 2026-02-09  
+ * @returns {void} - Does not return a value
+ * * Last Updated: 2026-02-09  
  * Author: Vince Allen D. Cristal  
  * Last Updated By: Vince Allen D. Cristal 
  */
@@ -69,11 +71,16 @@ function toggleTask(element) {
 
 /* * DOCU: Removes the parent list item of the clicked button
  * @param {HTMLElement} button - The button element clicked
- * @returns {void}
+ * @returns {void} - Does not return a value
+ * * Last Updated: 2026-02-09  
+ * Author: Vince Allen D. Cristal  
+ * Last Updated By: Vince Allen D. Cristal 
  */
 function removeTask(button) {
     const li = button.parentElement;
-    const text = li.querySelector('.task-text').textContent;
+    
+    const taskTextElement = li.querySelector('.task-text');
+    const text = taskTextElement ? taskTextElement.textContent : "Task";
     
     taskList.removeChild(li);
     showNotification(`Task removed: "${text}"`, "danger");
@@ -82,8 +89,8 @@ function removeTask(button) {
 /* * DOCU: Displays a temporary notification message
  * @param {string} message - The text to display
  * @param {string} type - The alert type
- * @returns {void}
- * @throws {void}
+ * @returns {void} - Does not return a value
+ * @throws {void} - No explicit exceptions thrown
  * * Last Updated: 2026-02-09  
  * Author: Vince Allen D. Cristal  
  * Last Updated By: Vince Allen D. Cristal  

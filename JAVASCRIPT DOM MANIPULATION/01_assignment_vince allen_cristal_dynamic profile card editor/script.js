@@ -14,7 +14,7 @@ const inputColor = document.querySelector('#color-picker');
  * @param {void} - No parameters
  * @returns {void} - Does not return a value
  * @throws {void} - No explicit exceptions thrown
- * * Last Updated: 2026-02-07  
+ * * Last Updated: 2026-02-09  
  * Author: Vince Allen D. Cristal  
  * Last Updated By: Vince Allen D. Cristal  
  */
@@ -30,7 +30,7 @@ function updateName() {
  * @param {void} - No parameters
  * @returns {void} - Does not return a value
  * @throws {void} - No explicit exceptions thrown
- * * Last Updated: 2026-02-07  
+ * * Last Updated: 2026-02-09  
  * Author: Vince Allen D. Cristal  
  * Last Updated By: Vince Allen D. Cristal  
  */
@@ -46,13 +46,13 @@ function updateBio() {
  * @param {void} - No parameters 
  * @returns {void} - Does not return a value
  * @throws {void} - No explicit exceptions thrown
- * * Last Updated: 2026-02-07  
+ * * Last Updated: 2026-02-09  
  * Author: Vince Allen D. Cristal  
  * Last Updated By: Vince Allen D. Cristal  
  */
 function updateImage() {
     if (inputImg.value.trim() !== "") {
-        displayImg.setAttribute('src', inputImg.value);
+        displayImg.src = inputImg.value;
     } else {
         alert("Please enter an image URL.");
     }
@@ -62,7 +62,7 @@ function updateImage() {
  * @param {void} - No parameters
  * @returns {void} - Does not return a value
  * @throws {void} - No explicit exceptions thrown
- * * Last Updated: 2026-02-07  
+ * * Last Updated: 2026-02-09  
  * Author: Vince Allen D. Cristal  
  * Last Updated By: Vince Allen D. Cristal  
  */

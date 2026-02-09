@@ -9,8 +9,8 @@ const p = document.querySelector("p");
 
 /* * DOCU: Updates text color for main elements
  * @param {string} color - color name
- * @returns {void}
- * @throws {void}
+ * @returns {void} - Does not return a value
+ * @throws {void} - No explicit exceptions thrown
  * * Last Updated: 2026-02-07
  * Author: Vince Allen D. Cristal
  * Last Updated By: Vince Allen D. Cristal
@@ -24,9 +24,9 @@ function setTextColor(color) {
 
 /* * DOCU: Resets UI to default state
  * @param {void} - Uses global variables
- * @returns {void}
- * @throws {void}
- * * Last Updated: 2026-02-07
+ * @returns {void} - Does not return a value
+ * @throws {void} - No explicit exceptions thrown
+ * * Last Updated: 2026-02-09
  * Author: Vince Allen D. Cristal
  * Last Updated By: Vince Allen D. Cristal
  */
@@ -47,9 +47,9 @@ function handleResetClick() {
 
 /* * DOCU: Updates UI based on selected color
  * @param {Event} event - Click event object
- * @returns {void}
- * @throws {void}
- * * Last Updated: 2026-02-07
+ * @returns {void} - Does not return a value
+ * @throws {void} - No explicit exceptions thrown
+ * * Last Updated: 2026-02-09
  * Author: Vince Allen D. Cristal
  * Last Updated By: Vince Allen D. Cristal
  */

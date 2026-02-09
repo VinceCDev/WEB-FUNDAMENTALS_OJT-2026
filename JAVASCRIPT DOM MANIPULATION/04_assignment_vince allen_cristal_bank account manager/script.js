@@ -1,156 +1,68 @@
-// Select display elements
+// Get elements using ID selection
 const balanceElement = document.getElementById('balance');
-const messageElement = document.getElementById('message');
-
-// Select input elements
 const amountInput = document.getElementById('amountInput');
-
-// Select buttons
+const messageElement = document.getElementById('message');
 const depositBtn = document.getElementById('depositBtn');
 const withdrawBtn = document.getElementById('withdrawBtn');
 
-// Set initial state
+// Initial State
 let currentBalance = 1000.00;
 
-/* * DOCU: Formats number to currency string
- * @param {number} amount - Value to format
- * @returns {string} - Formatted string
- * @throws {void}
- * * Last Updated: 2026-02-07
+/* * DOCU: Formats a numerical value into a USD currency string
+ * @param {number} amount - The numerical amount to be formatted
+ * @returns {string} - The formatted string
+ * @throws {void} - No explicit exceptions thrown
+ * * Last Updated: 2026-02-09
  * Author: Vince Allen D. Cristal
  * Last Updated By: Vince Allen D. Cristal
  */
 function formatCurrency(amount) {
-    return `$${amount.toFixed(2)}`;
+    return '$' + amount.toFixed(2);
 }
 
-/* * DOCU: Updates screen and resets input
- * @param {string} message - Text to display
- * @param {string} type - CSS class for style
- * @returns {void}
- * @throws {void}
- * * Last Updated: 2026-02-07
+/* * DOCU: Updates the DOM elements to reflect the current balance and transaction status
+ * @param {string} message - The status message to display to the user
+ * @param {boolean} [isError=false] - If true, displays text in red; otherwise green
+ * @returns {void} - Does not return a value
+ * @throws {void} - No explicit exceptions thrown
+ * * Last Updated: 2026-02-09
  * Author: Vince Allen D. Cristal
  * Last Updated By: Vince Allen D. Cristal
  */
-function updateUI(message, type) {
+function updateUI(message, isError = false) {
     balanceElement.textContent = formatCurrency(currentBalance);
-    
     messageElement.textContent = message;
-    messageElement.className = `message ${type}`;
-    
-    amountInput.value = '';
-    amountInput.focus();
-    
-    console.log(`Transaction: ${message} | New Balance: ${formatCurrency(currentBalance)}`);
+    messageElement.style.color = isError ? 'red' : 'green';
+    amountInput.value = ''; 
 }
 
-/* * DOCU: Checks if input is valid number
- * @param {number} amount - Value to check
- * @returns {Object} - Validation result object
- * @throws {void}
- * * Last Updated: 2026-02-07
- * Author: Vince Allen D. Cristal
- * Last Updated By: Vince Allen D. Cristal
- */
-function validateAmount(amount) {
-    if (isNaN(amount)) {
-        return {
-            isValid: false,
-            errorMessage: "Please enter a valid number."
-        };
-    }
-    
-    if (amount <= 0) {
-        return {
-            isValid: false,
-            errorMessage: "Please enter a positive amount greater than zero."
-        };
-    }
-    
-    return {
-        isValid: true,
-        errorMessage: null
-    };
-}
-
-/* * DOCU: Processes deposit transaction
- * @param {void} - Uses global variables
- * @returns {void}
- * @throws {void}
- * * Last Updated: 2026-02-07
- * Author: Vince Allen D. Cristal
- * Last Updated By: Vince Allen D. Cristal
- */
-function handleDeposit() {
+// Event handler for the deposit button
+depositBtn.addEventListener('click', () => {
     const amount = parseFloat(amountInput.value);
-    const validation = validateAmount(amount);
-    
-    if (!validation.isValid) {
-        updateUI(validation.errorMessage, "error");
+
+    if (isNaN(amount) || amount <= 0) {
+        updateUI('Please enter a valid positive amount.', true);
         return;
     }
-    
+
     currentBalance += amount;
-    updateUI(`Successfully deposited ${formatCurrency(amount)}!`, "success");
-}
-
-/* * DOCU: Processes withdrawal transaction
- * @param {void} - Uses global variables
- * @returns {void}
- * @throws {void}
- * * Last Updated: 2026-02-07
- * Author: Vince Allen D. Cristal
- * Last Updated By: Vince Allen D. Cristal
- */
-function handleWithdraw() {
-    const amount = parseFloat(amountInput.value);
-    const validation = validateAmount(amount);
-    
-    if (!validation.isValid) {
-        updateUI(validation.errorMessage, "error");
-        return;
-    }
-    
-    if (amount > currentBalance) {
-        updateUI("Insufficient funds for this withdrawal.", "error");
-        return;
-    }
-    
-    currentBalance -= amount;
-    updateUI(`Successfully withdrew ${formatCurrency(amount)}!`, "success");
-}
-
-// Attach click event handlers
-depositBtn.addEventListener('click', handleDeposit);
-withdrawBtn.addEventListener('click', handleWithdraw);
-
-// Prevent enter key default
-amountInput.addEventListener('keypress', function(event) {
-    if (event.key === 'Enter') {
-        event.preventDefault();
-    }
+    updateUI(`Successfully deposited ${formatCurrency(amount)}`);
 });
 
-/* * DOCU: Sets initial application state
- * @param {void}
- * @returns {void}
- * @throws {void}
- * * Last Updated: 2026-02-07
- * Author: Vince Allen D. Cristal
- * Last Updated By: Vince Allen D. Cristal
- */
-function initializeApp() {
-    balanceElement.textContent = formatCurrency(currentBalance);
-    amountInput.focus();
-    
-    console.log('Bank Account Manager initialized');
-    console.log(`Starting Balance: ${formatCurrency(currentBalance)}`);
-}
+// Event handler for the withdraw button
+withdrawBtn.addEventListener('click', () => {
+    const amount = parseFloat(amountInput.value);
 
-// Check Document Object Model readiness
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initializeApp);
-} else {
-    initializeApp();
-}
+    if (isNaN(amount) || amount <= 0) {
+        updateUI('Please enter a valid positive amount.', true);
+        return;
+    }
+
+    if (amount > currentBalance) {
+        updateUI('Insufficient funds.', true);
+        return;
+    }
+
+    currentBalance -= amount;
+    updateUI(`Successfully withdrew ${formatCurrency(amount)}`);
+});

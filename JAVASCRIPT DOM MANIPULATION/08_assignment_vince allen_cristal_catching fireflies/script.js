@@ -3,8 +3,8 @@ const fireflies = document.querySelectorAll(".firefly");
 
 /* * DOCU: Moves element to random screen position
  * @param {HTMLElement} element - Target element
- * @returns {void}
- * @throws {void}
+ * @returns {void} - Does not return a value
+ * @throws {void} - No explicit exceptions thrown
  * * Last Updated: 2026-02-07
  * Author: Vince Allen D. Cristal
  * Last Updated By: Vince Allen D. Cristal
@@ -23,8 +23,8 @@ function moveRandomly(element) {
 /* * DOCU: Creates visual explosion effect
  * @param {number} x - X coordinate
  * @param {number} y - Y coordinate
- * @returns {void}
- * @throws {void}
+ * @returns {void} - Does not return a value
+ * @throws {void} - No explicit exceptions thrown
  * * Last Updated: 2026-02-07
  * Author: Vince Allen D. Cristal
  * Last Updated By: Vince Allen D. Cristal

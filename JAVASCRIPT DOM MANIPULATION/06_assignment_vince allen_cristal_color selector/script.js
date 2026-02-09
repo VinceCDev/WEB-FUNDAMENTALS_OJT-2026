@@ -3,9 +3,9 @@ const container = document.getElementById("container");
 
 /* * DOCU: Resets background color when container is clicked
  * @param {void} - Uses a this approach
- * @returns {void}
- * @throws {void}
- * * Last Updated: 2026-02-07
+ * @returns {void} - Does not return a value
+ * @throws {void} - No explicit exceptions thrown
+ * * Last Updated: 2026-02-09
  * Author: Vince Allen Cristal
  * Last Updated By: Vince Allen Cristal
  */
@@ -20,9 +20,9 @@ document.querySelectorAll(".color-box").forEach(button => {
 
     /* * DOCU: Updates container color and stops event bubbling
      * @param {Event} event - The click event object
-     * @returns {void}
-     * @throws {void}
-     * * Last Updated: 2026-02-07
+     * @returns {void} - Does not return a value
+     * @throws {void} - No explicit exceptions thrown
+     * * Last Updated: 2026-02-09
      * Author: Vince Allen Cristal
      * Last Updated By: Vince Allen Cristal
      */
@@ -33,6 +33,6 @@ document.querySelectorAll(".color-box").forEach(button => {
 
         container.style.backgroundColor = newColor;
 
-        console.log("Color changed to: " + this.textContent);
+        alert("Color changed to: " + this.textContent);
     });
 });
