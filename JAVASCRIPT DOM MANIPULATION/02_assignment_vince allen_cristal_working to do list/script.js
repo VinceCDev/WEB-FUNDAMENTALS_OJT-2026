@@ -1,13 +1,17 @@
 // Select key DOM elements
-const todoForm = document.querySelector('#todo-form');
 const taskInput = document.querySelector('#task-input');
 const taskList = document.querySelector('#task-list');
 const notificationArea = document.querySelector('#notification-area');
 
-// Manage form submission in webpage
-todoForm.addEventListener('submit', function(event) {
-    event.preventDefault();
-    
+/* * DOCU: Handles the Add Task button click. Gets input and validates.
+ * @param {void}
+ * @returns {void}
+ * @throws {void}
+ * * Last Updated: 2026-02-09  
+ * Author: Vince Allen D. Cristal  
+ * Last Updated By: Vince Allen D. Cristal  
+ */
+function handleAddTask() {
     const taskText = taskInput.value.trim();
 
     if (taskText === "") {
@@ -17,13 +21,13 @@ todoForm.addEventListener('submit', function(event) {
 
     addTask(taskText);
     taskInput.value = "";
-});
+}
 
 /* * DOCU: Creates a new task item and appends it to the list
  * @param {string} text - The content of the task
  * @returns {void}
  * @throws {void}
- * * Last Updated: 2026-02-07  
+ * * Last Updated: 2026-02-09  
  * Author: Vince Allen D. Cristal  
  * Last Updated By: Vince Allen D. Cristal  
  */
@@ -35,18 +39,15 @@ function addTask(text) {
     span.textContent = text;
     span.className = 'task-text';
     
-    span.addEventListener('click', function() {
-        span.classList.toggle('completed');
-    });
+    // Set inline onclick for the span
+    span.setAttribute('onclick', 'toggleTask(this)');
 
     const deleteBtn = document.createElement('button');
     deleteBtn.textContent = "Remove";
     deleteBtn.className = 'delete-btn';
 
-    deleteBtn.addEventListener('click', function() {
-        taskList.removeChild(li);
-        showNotification(`Task removed: "${text}"`, "danger");
-    });
+    // Set inline onclick for the delete button
+    deleteBtn.setAttribute('onclick', 'removeTask(this)');
 
     li.appendChild(span);
     li.appendChild(deleteBtn);
@@ -55,12 +56,35 @@ function addTask(text) {
     showNotification(`Task added: "${text}"`, "success");
 }
 
+/* * DOCU: Toggles the completed class on the task text
+ * @param {HTMLElement} element - The span element clicked
+ * @returns {void}
+ * Last Updated: 2026-02-09  
+ * Author: Vince Allen D. Cristal  
+ * Last Updated By: Vince Allen D. Cristal 
+ */
+function toggleTask(element) {
+    element.classList.toggle('completed');
+}
+
+/* * DOCU: Removes the parent list item of the clicked button
+ * @param {HTMLElement} button - The button element clicked
+ * @returns {void}
+ */
+function removeTask(button) {
+    const li = button.parentElement;
+    const text = li.querySelector('.task-text').textContent;
+    
+    taskList.removeChild(li);
+    showNotification(`Task removed: "${text}"`, "danger");
+}
+
 /* * DOCU: Displays a temporary notification message
  * @param {string} message - The text to display
  * @param {string} type - The alert type
  * @returns {void}
  * @throws {void}
- * * Last Updated: 2026-02-07  
+ * * Last Updated: 2026-02-09  
  * Author: Vince Allen D. Cristal  
  * Last Updated By: Vince Allen D. Cristal  
  */
